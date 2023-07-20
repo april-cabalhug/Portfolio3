@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>April Cabalhug | Portfolio</title>
+<link rel = "icon" href="images/logo.png" type = "image/x-icon">
+<meta charset="UTF-8">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="images/nobgme.png" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-folder w3-xxlarge"></i>
+    <p>PROJECTS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo">
+  <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im April.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+    <span class="w3-hide-small"></span>
+  </a>
+  <script type="text/javascript">
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+  </script>
+</h1>
+    <img src="images/me.gif" alt="me" class="w3-image"width="990">
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Here's who I am & what I do</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>April Rose Cabalhug, a 4th-year BS Information Technology graduating student at Cavite State University - Imus. Web development and Java enthusiast with a focus on creating impactful digital experiences. Skilled in front-end and back-end development, I thrive on delivering intuitive interfaces and efficient functionality. Eager to contribute, collaborate, and make a positive impact in the dynamic world of web development.
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <p class="w3-wide">HTML</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:100%"></div>
+    </div>
+    <p class="w3-wide">CSS</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:100%"></div>
+    </div>
+    <p class="w3-wide">Javascript</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:60%"></div>
+    </div>
+    <p class="w3-wide">PHP</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div>
+    <p class="w3-wide">JQuery</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:50%"></div>
+    </div>
+    <p class="w3-wide">Java</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:90%"></div>
+    </div>
+    <p class="w3-wide">SQL</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:100%"></div>
+    </div>
+    <p class="w3-wide">C++</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:75%"></div>
+    </div>
+    <p class="w3-wide">VB.Net</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:65%"></div>
+    </div>
+    <p class="w3-wide">C</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:50%"></div>
+    </div>
+    <p class="w3-wide">Python</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:51%"></div>
+    </div>
+    <p class="w3-wide">Photoshop/Illustrator</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Canva</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:50%"></div>
+    </div>
+    <p class="w3-wide">Figma</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:60%"></div>
+    </div>
+    <br>
+    
+    <h3 class="w3-padding-16 w3-text-light-grey">Education</h3>
+
+    <div class="w3-row w3-padding-16 w3-section w3-light-grey  w3-opacity w3-hover-opacity-off">
+      <div class="w3-half w3-section  w3-left-align" style="margin:16px">
+        <span class="w3-xlarge"><b>Bachelor of Science in Information Technology</b></span><br>
+        Bachelor's Degree
+        <br><br>
+        <span>
+          CAVITE STATE UNIVERSITY - IMUS CAMPUS<br>Palico IV, Imus, Cavite
+        </span>
+      </div>
+      <div class="w3-half w3-section  w3-right-align" style="margin:-50px">
+        <span class="w3-xlarge">2019-2023</span><br>
+      </div>
+    </div>
+
+    <div class="w3-row w3-padding-16 w3-section w3-light-grey  w3-opacity w3-hover-opacity-off">
+      <div class="w3-half w3-section  w3-left-align" style="margin:16px">
+        <span class="w3-xlarge"><b>Multimedia and Information Technology</b></span><br>
+        Associate Degree
+        <br><br>
+        <span>
+          DATACOM INSTITUTE OF COMPUTER TECHNOLOGY<br>Palico IV, Imus, Cavite
+        </span>
+      </div>
+      <div class="w3-half w3-section  w3-right-align" style="margin:-50px">
+        <span class="w3-xlarge">2015-2017</span><br>
+      </div>
+    </div>
+
+    <div class="w3-row w3-padding-16 w3-section w3-light-grey  w3-opacity w3-hover-opacity-off">
+      <div class="w3-half w3-section  w3-left-align" style="margin:16px">
+        <span class="w3-xlarge"><b>English Proficiency 2</b></span><br>
+        Vocational Course
+        <ul style="list-style-type:square">
+          <li>Enhancement on Diction</li>
+          <li>American Accent</li>
+          <li>Call Simulation</li>
+          <li>Spontaneity</li>
+        </ul>
+        <br>
+        <span>
+          BESTECH - IMUS BRANCH<br>Palico IV, Imus, Cavite
+        </span>
+      </div>
+      <div class="w3-half w3-section  w3-right-align" style="margin:-50px">
+        <span class="w3-xlarge">May–Sept 2017</span><br>
+      </div>
+    </div>
+    
+    <!-- Grid for pricing tables -->
+    <h3 class="w3-padding-16 w3-text-light-grey">Experience</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">
+            SYSTEM ADMINISTRATION INTERN/PROJECT MANAGEMENT INTERN (486 hrs)<br>
+            <h7>Mar - Jun 2023</h7>
+          </li>
+          <li class="w3-padding-16">ROC.PH Digital Marketing Services<br>
+            <h7>Blk98 Lot25 Beaumont Street, Village 3 Metro South Subdivision, General Trias, 4107 Cavite</h7></li>
+          <li class="w3-light-grey w3-padding-24 w3-left-align">
+            • Ticket Management: Create, manage, resolve, and monitor ticket requests.<br>
+            • Client Communication: Respond to client inquiries about the status of their task ticket updates.<br>
+            • Social Media Management: Post social media content for client's business or company platforms.<br>
+            • Data Migration: Perform data migration tasks.<br>
+            • Data Entry: Accurate and efficient data entry.<br>
+            • Team Coordination: Assist, guide, and monitor team members in new department tasks, assigning tasks for efficiency.<br>
+            • Interdepartmental Collaboration: Communicate and collaborate with other departments to complete 
+            tasks and stay updated on client requests.<br>
+            • Onboarding: Create company profile accounts for new intern employees.<br>
+            • Virtual Office Design: Design layout for the company's virtual office in Gather app.<br>
+          </li>
+        </ul>
+      </div>
+
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">
+            ADMIN INTERN (300 hrs)<br>
+            <h7>Jul 2016 - Jan 2017</h7>
+          </li>
+          <li class="w3-padding-16">Office of the Election Officer (Bacoor Government Center)<br>
+            <h7>Molino Blvd., Brgy. San Nicolas II, Bacoor, Cavite</h7></li>
+          <li class="w3-light-grey w3-padding-24  w3-left-align">
+            • Provided attentive assistance to visitors, addressing special needs or requests.<br>
+            • Accurately completed daily paperwork and computer data entry under supervision.<br>
+            • Conducted clerical tasks, including typing, filing, and completing simple forms.<br>
+            • Carried out additional assigned duties as required.<br>
+          </li>
+        </ul>
+    <!-- End Grid/Pricing tables -->
+    </div>
+    
+    <!-- Certificates Section -->
+    <h3 class="w3-padding-24 w3-text-light-grey">Trainings & Webinar Attended</h3>  
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-third">
+        <img src="images/certificates/cert1.jpg" style="width:100%">
+        <img src="images/certificates/cert2.jpeg" style="width:100%">
+      </div>
+
+      <div class="w3-third">
+        <img src="images/certificates/cert3.jpg" style="width:100%">
+        <img src="images/certificates/cert4.jpg" style="width:100%">
+      </div>
+
+      <div class="w3-third">
+        <img src="images/certificates/cert5.jpg" style="width:100%">
+        <img src="images/certificates/cert6.jpg" style="width:100%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Certificates Section -->
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <a href="images/cabalhug_cv.pdf" download>  <i class="fa fa-download"></i> Download Resume</a>
+    </button>
+  </div>
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Projects</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Web Development</button>
+  <button class="btn" onclick="filterSelection('cars')"> Designs</button>
+  <button class="btn" onclick="filterSelection('people')"> Java</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="images/lms.png" alt="lms" style="width:100%; height: 260px;">
+      <h4>Learning Management System</h4>
+      <img src="images/html5.png" alt="html">
+      <img src="images/css3.png" alt="css">
+      <img src="images/php.png" alt="php">
+      <img src="images/jquery.png" alt="jquery">
+      <img src="images/javascript.png" alt="javascript">
+      <img src="images/bootstrap.png" alt="bootstrap">
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="images/portfolio.png" alt="portfolio" style="width:100%; height: 260px;">
+      <h4>ePortfolio</h4>
+      <img src="images/html5.png" alt="html">
+      <img src="images/css3.png" alt="css">
+      <img src="images/javascript.png" alt="javascript">
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="images/fildish2.png" alt="fildish2" style="width:100%; height: 260px;">
+      <h4>Recipe Website</h4>
+      <img src="images/html5.png" alt="html">
+      <img src="images/css3.png" alt="css">
+      <img src="images/javascript.png" alt="javascript">
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <a href="images/gym.pdf" target="_blank">
+      <img src="images/gym.png" alt="webdesign1" style="width:100%; height: 260px;"></a>
+      <h4>Gym/Fitness Website Design</h4>
+      <img src="images/figma.png" alt="figma">
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <a href="images/recipe.pdf" target="_blank">
+      <img src="images/recipe.png" alt="webdesign1" style="width:100%; height: 260px;"></a>
+      <h4>Recipe Website Design</h4>
+      <img src="images/figma.png" alt="figma">
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="images/FilDish_Logo.png" alt="webdesign1" style="width:100%; height: 260px;">
+      <h4>Logo Design</h4>
+      <img src="images/canva.png" alt="canva">
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="images/mobile-design.jpg" alt="mobdesign1" style="width:100%; height: 450px;">
+      <h4>Recipe App Mobile Design</h4>
+      <img src="images/photoshop.png" alt="photoshop">
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="images/lab3.jpg" alt="mobdesign2" style="width:100%; height: 450px;">
+      <h4>Weather Forecast Mobile Design</h4>
+      <img src="images/photoshop.png" alt="photoshop">
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="images/mdms.png" alt="Car" style="width:100%; height: 260px;">
+      <h4>Module Distribution Mangement System</h4>
+      <img src="images/java.png" alt="java">
+    </div>
+  </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Tanza, cavite</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 09152189324</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: c.aprilrose410@gmail.com</p>
+    </div><br>
+    <p>Let's get in touch. Send me a message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i><a href="mailto:c.aprilrose410@gmail.com"> SEND MESSAGE</a>
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <a href="https://www.facebook.com/c.aprilrose"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://github.com/april-cabalhug/"><i class="fa fa-github w3-hover-opacity"></i></a>
+    <a href="linkedin.com/in/april-rose-cabalhug/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <p class="w3-medium">© 2022 by April Cabalhug.</p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
